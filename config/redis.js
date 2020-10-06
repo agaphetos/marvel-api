@@ -7,7 +7,7 @@ function loadRedisConfig() {
     redis.credentials = {
       host: REDIS_HOST,
       port: REDIS_PORT,
-    }
+    };
 
     if (REDIS_ABSOLUTE_EXPIRY) {
       redis.absoluteExpiry = REDIS_ABSOLUTE_EXPIRY;
