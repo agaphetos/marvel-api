@@ -104,9 +104,9 @@ We used both `Absolute Expiration` and `Auto Evict Policy` in this application.
 
 We also used their recommendation to cache our data for 24 hours. See https://developer.marvel.com/documentation/attribution.
 
-`Auto Evict Policy` means that our data will reside on our `Cache Store` with indefinite amount of time based and automatically extends the most frequent data accessed. While evicting the least accessed data. This enables us to utilize the `RAM/Memory` of our `machine/server` efficiently. `Redis` automatically does this.
+`Auto Evict Policy` means that our data will reside on our `Cache Store` with indefinite amount of time and automatically determines which should be retained based on the most frequent data accessed. While evicting the least accessed data. This was used for caching the `resource based` requests to `Marvel API` on `GET /characters/{characterId}`.
 
-This was also used for caching the `resource based` requests to `Marvel API` on `GET /characters/{characterId}`.
+This enables us to utilize the `RAM/Memory` of our `machine/server` efficiently. `Redis` automatically does this. 
 
 ## Credits
 
